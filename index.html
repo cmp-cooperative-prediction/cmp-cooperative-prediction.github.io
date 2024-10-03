@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSSR6942QL"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FSSR6942QL');
+    </script>
+
+    <title>CMP: Cooperative Motion Prediction with Multi-Agent Communication</title>
+    <link rel="icon" type="image/png" href="img/favicon_2.png">
+
+    <meta name="description" content="CMP: Cooperative Motion Prediction with Multi-Agent Communication">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/png" href="img/seal_icon.png"> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!-- <link rel="stylesheet" href="css/bulma.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/bulma-carousel.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/bulma-slider.min.css"> -->
+    <link rel="stylesheet" href="css/bulma-myscope.css">
+
+    <!-- https://github.com/jgthms/bulma/issues/302#issuecomment-441890938 Follow this to use bulma style here without conflicts with app.css. I put bulma.min.css, bulma-carousel.min.css, and bulma-slider.min.css into a single file before applying less. -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="js/bulma-carousel.min.js"></script>
+    <script src="js/bulma-slider.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/app.js"></script>
+
+    <style>
+        .nav-pills {
+          position: relative;
+          display: inline;
+        }
+        .imtip {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="main">
+        <div class="row mt-4">
+            <h2 class="col-md-12 text-center">
+                <span style="font-weight: 900;">CMP</span>: <br><span style="font-weight: 900;">C</span>ooperative  <span style="font-weight: 900;">M</span>otion <span style="font-weight: 900;">P</span>rediction with Multi-Agent Communication</br>
+            </h2>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                <!-- <br> -->
+                <li><a href="">Zehao Wang</a></li>
+                <li>Yuping Wang</li>
+                <li>Zhuoyuan Wu</li>
+                <li>Hengbo Ma</li>
+                <li>Zhaowei Li</li>
+                <li><a href="https://hangqiu.github.io/">Hang Qiu</a></li>
+                <li><a href="https://jiachenli94.github.io/">Jiachen Li</a></li>
+                <!-- <br> -->
+                <br>
+                <br>
+                    <a href="https://robotics.ucr.edu//">
+                        <image src="img/UCR_logo.svg" height="50px"> 
+                    </a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row justify-content-md-center">
+            <div class="col-md-2 text-center">
+                <a href="">
+                    <img src="img/paper_img.png" height="45px">
+                    <h4><strong>Paper</strong></h4>
+                </a>
+            </div>
+            <div class="col-md-2 text-center">
+                <a href="">
+                    <img src="img/youtube_icon.png" height="45px">
+                    <h4><strong>Video</strong></h4>
+                </a>
+            </div>
+            <div class="col-md-2 text-center">
+                <a href="">
+                    <img src="img/github.png" height="45px">
+                    <h4><strong>Code (coming soon)</strong></h4>
+                </a>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 col-lg-10">
+                <br>
+                <h5 class="text-justify text-center">
+                    A practical, latency-robust framework for cooperative motion prediction, which leverages the information shared by multiple CAVs to enhance perception and motion prediction performance.                
+                </h5>
+                <br>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 col-lg-10">
+                <p class="text-justify">
+                    <br><p style="text-align:center;">
+                        <image src="img/fig3.png" width="100%">
+            </div>
+            <br>
+        </div>
+        
+    </div>
+
+        <div class="myscope">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-4">
+                        <video autoplay controls muted loop playsinline width="100%">
+                            <source src="videos/CMP_with_cooperation_1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="col-md-4">
+                        <video autoplay controls muted loop playsinline width="100%">
+                            <source src="videos/CMP_with_cooperation_2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="col-md-4">
+                        <video autoplay controls muted loop playsinline width="100%">
+                            <source src="videos/CMP_with_cooperation_3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 col-lg-10">
+                <h5 class="text-justify text-center">
+                    Predicted trajectories with cooperative perception and prediction
+                </h5>
+            </div>
+        </div>
+        <br>
+        
+        <div class="myscope"></div>
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-4">
+                        <video autoplay controls muted loop playsinline width="100%">
+                            <source src="videos/CMP_without_cooperation_1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="col-md-4">
+                        <video autoplay controls muted loop playsinline width="100%">
+                            <source src="videos/CMP_without_cooperation_2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="col-md-4">
+                        <video autoplay controls muted loop playsinline width="100%">
+                            <source src="videos/CMP_without_cooperation_3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 col-lg-10">
+                <h5 class="text-justify text-center">
+                    Predicted trajectories with no cooperation
+                </h5>
+            </div>
+        </div>
+        <br>
+    
+    <div class="container" id="main">
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 col-lg-10">
+                <h3 class="mt-4 mb-2">
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    The confluence of the advancement of Autonomous Vehicles (AVs) and the maturity of Vehicle-to-Everything (V2X) communication has enabled the capability of cooperative connected and automated vehicles (CAVs). Building on top of cooperative perception, this paper explores the feasibility and effectiveness of cooperative motion prediction. Our method, CMP, takes LiDAR signals as model input to enhance tracking and prediction capabilities. Unlike previous work that focuses separately on either cooperative perception or motion prediction, our framework, to the best of our knowledge, is the first to address the unified problem where CAVs share information in both perception and prediction modules. Incorporated into our design is the unique capability to tolerate realistic V2X bandwidth limitations and transmission delays, while dealing with bulky perception representations. We also propose a prediction aggregation module, which unifies the predictions obtained by different CAVs and generates the final prediction. Through extensive experiments and ablation studies on the OPV2V and V2V4Real datasets, we demonstrate the effectiveness of our method in cooperative perception, tracking, and motion prediction. In particular, CMP reduces the average prediction error by 16.4% with fewer missing detections compared with the no cooperation setting and by 12.3% compared with the strongest baseline. Our work marks a significant step forward in the cooperative capabilities of CAVs, showcasing enhanced performance in complex scenarios. 
+                </p>
+            </div>
+        </div>
+        
+        <!-- TODO -->
+        <!-- <div class="row justify-content-md-center">
+            <div class="col-md-6 text-center">
+                <iframe width="560" height="285" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div> -->
+
+        <!-- <div class="row justify-content-md-center">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">LLMs can generate plans and write robot code 📝 but they can also make mistakes. How do we get LLMs to 𝘬𝘯𝘰𝘸 𝘸𝘩𝘦𝘯 𝘵𝘩𝘦𝘺 𝘥𝘰𝘯&#39;𝘵 𝘬𝘯𝘰𝘸 🤷 and ask for help?<br><br>Read more on how we can do this (with statistical guarantees) for LLMs on robots 👇<a href="https://t.co/D7mHGzNP3p">https://t.co/D7mHGzNP3p</a> <a href="https://t.co/M9lUqlZ5cB">pic.twitter.com/M9lUqlZ5cB</a></p>&mdash; Allen Z. Ren (@allenzren) <a href="https://twitter.com/allenzren/status/1677000811803443213?ref_src=twsrc%5Etfw">July 6, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div> -->
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 col-lg-10">
+                <br>
+                <h3>
+                    Key Ideas and Contributions
+                </h3>
+                <p class="text-justify">
+                    <br><p style="text-align:center;">
+                        <image src="img/overview.png" width="100%">
+                    </p>
+                    <strong>1) Practical, Latency-robust Framework for Cooperative Motion Prediction</strong>: our framwork integrates cooperative perception with trajectory prediction, marking a pioneering effort in the realm of connected and automated vehicles, which enables CAVs to share and fuse data from LiDAR point clouds to improve object detection, tracking, and motion prediction.<br>
+                    <strong>2) Attention-based Prediction Aggregation</strong>: prediction aggregator take advantage of the predictions shared by other CAVs, which improves prediction accuracy. This mechanism is scalable and can effectively handle varying numbers of CAVs.<br>
+                    <strong>3) State-of-the-art Performance in cooperative prediction under practical settings on the OPV2V and V2V4Real datasets</strong>: our framwork evaluated on both simulated V2V datasets and real world V2V scenarios, and outperforms the cooperative perception and prediction network proposed by the strongest baseline V2VNet.<br>
+        </div>
+        <br>
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 col-lg-10">
+                <br>
+                <h3>
+                    Quantitative Results of Cooperative Prediction with Ablation
+                </h3>
+                <p class="text-justify">
+                    <br><p style="text-align:center;">
+                        <image src="img/tables_cmp.png" width="100%">
+                </p>
+            </div>
+            <br>
+        </div>
+        <br>
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 col-lg-10">
+                <h3>
+                    Citation 
+                </h3>
+                <!-- TODO -->
+                <!-- <a href="">[arxiv version]</a> -->
+                <div class="form-group col-md-12">
+                    <textarea id="bibtex" class="form-control" rows="6" readonly>
+                    </textarea>
+                </div>
+            </div>
+        </div>
+        <!-- TODO -->
+        <!-- <div class="row justify-content-md-center mt-4">
+            <div class="col-md-12 col-lg-10">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                </p>
+            </div>
+        </div> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
